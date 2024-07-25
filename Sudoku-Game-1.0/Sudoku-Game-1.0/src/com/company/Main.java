@@ -6,7 +6,6 @@ import java.util.Scanner;
 import static com.company.UserChoosingDifficulty.difficulty;
 import static com.company.UserTypeInField.parseAdd;
 public class Main {
-    private static Sudoku usrSudoku;
     public static void main(String[] args) {
         play();
     }
@@ -16,30 +15,31 @@ public class Main {
     }
 
     private static void play() {
+        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(null);
         Scanner scanner = new Scanner(System.in);
         boolean endGame;
         int diffReturn;
         String location = "";
         boolean parseAddReturn;
         ArrayList<String> undoList = new ArrayList<String>();
-        while ((diffReturn = difficulty()) != 0) {
+        while ((diffReturn = difficulty(usrSudokuWrapper)) != 0) {
             endGame = false;
             if (diffReturn == 1) {
                 while (!endGame) {
                     displayMenu();
                     String usrChoice = scanner.next();
-                    SudokuDisplay display=new SudokuDisplay(usrSudoku);
                     if (usrChoice.equals("1")) {
                         System.out.println("\nType in the location to fill in...");
                         location = scanner.next().toUpperCase();
-                        parseAddReturn = parseAdd(location);
-                        boolean solvedStatus = usrSudoku.isSolved();
+                        parseAddReturn = parseAdd(usrSudokuWrapper,location);
+                        boolean solvedStatus = usrSudokuWrapper.sudoku.isSolved();
                         if (solvedStatus) {
                             System.out.println("\nYou Won!");
                             endGame = true;
                         }
                         if (!parseAddReturn) {
                             System.out.println("Can't fill this value in this place, try again...");
+                            SudokuDisplay display=new SudokuDisplay(usrSudokuWrapper.sudoku);
                             System.out.println(display.output());
                         }
                         else {
@@ -51,7 +51,8 @@ public class Main {
                         if (index >= 0) {
                             String obj = undoList.get(index);
                             if (obj.matches("[A-I][1-9]")) {
-                                usrSudoku.remove((int)obj.charAt(0) - 65, (int)obj.charAt(1) - 49);
+                                usrSudokuWrapper.sudoku.remove((int)obj.charAt(0) - 65, (int)obj.charAt(1) - 49);
+                                SudokuDisplay display=new SudokuDisplay(usrSudokuWrapper.sudoku);
                                 System.out.println(display.output());
                                 undoList.remove(index);
                             }
@@ -61,7 +62,8 @@ public class Main {
                         }
                     }
                     else if (usrChoice.equals("3")) {
-                        usrSudoku.solve();
+                        usrSudokuWrapper.sudoku.solve();
+                        SudokuDisplay display=new SudokuDisplay(usrSudokuWrapper.sudoku);
                         System.out.println(display.toString());
                         endGame = true;
                     }
