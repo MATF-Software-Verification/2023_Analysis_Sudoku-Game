@@ -34,4 +34,5 @@ public class UserChoosingDifficulty { //class extracted from primary Main class
         }
         return result;
     }
+
 }
