@@ -40,7 +40,6 @@ class UserChoosingDifficultyTest {
     }
     @Test
     public void testDifficultyEasy() {
-        UserChoosingDifficulty obj=new UserChoosingDifficulty();
         setUpInput("1\n");
         SudokuWrapper usrSudokuWrapper = new SudokuWrapper(easy);
         SudokuDisplay displayEasy=new SudokuDisplay(easy);
