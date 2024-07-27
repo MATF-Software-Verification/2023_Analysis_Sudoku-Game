@@ -22,7 +22,7 @@ public class UserTypeInField { //class extracted from primary Main class
                 }
             }
         }
-        else {
+        else {   //why is this else here? It's going to return false either way :)
             return false;
         }
         return false;

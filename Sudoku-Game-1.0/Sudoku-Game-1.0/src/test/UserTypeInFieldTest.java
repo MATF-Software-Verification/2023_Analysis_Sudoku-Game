@@ -12,6 +12,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.InputMismatchException;
 
 import static com.company.UserTypeInField.parseAdd;
 import static org.junit.jupiter.api.Assertions.*;
@@ -75,24 +76,55 @@ public class UserTypeInFieldTest {
         return -1;
     }
     @Test
-    public void fieldFromFirstBoxInMediumSudoku(){
+    public void fieldFromFifthBoxInEasySudoku(){
+        String str="E6";
+        int col=letterToNumber(str.charAt(0));
+        char rowChar=str.charAt(str.length() - 1);
+        int row=Character.getNumericValue(rowChar)-1;
+        setUpInput("8\n");
+        boolean indicator=easySudokuWrapper.sudoku.add(col,row,8);
+        assertEquals(indicator,parseAdd(easySudokuWrapper,str));
+        display=new SudokuDisplay(easySudokuWrapper.sudoku);
+        String sudokuBoardAsString=display.output();
+        assertTrue(testOut.toString().contains(sudokuBoardAsString));
+    }
+    @Test
+    public void fieldC1InMediumSudokuNumberNotFromSolvedSudoku(){
         String str="C1";
         int col=letterToNumber(str.charAt(0));
         char rowChar=str.charAt(str.length() - 1);
         int row=Character.getNumericValue(rowChar)-1;
         setUpInput("1\n");
-        assertEquals(mediumSudokuWrapper.sudoku.add(col,row,1),parseAdd(mediumSudokuWrapper,str));
-    //    display=new SudokuDisplay(mediumSudokuWrapper.sudoku);
-    //    assertTrue(testOut.toString().contains(display.toString()));
+        boolean indicator=mediumSudokuWrapper.sudoku.add(col,row,1);
+        assertEquals(indicator,parseAdd(mediumSudokuWrapper,str));
+        display=new SudokuDisplay(mediumSudokuWrapper.sudoku);
+        String sudokuBoardAsString=display.output();
+        assertTrue(testOut.toString().contains(sudokuBoardAsString));
     }
     @Test
-    public void fieldFromThirdBoxInExpert(){
-        String str="I3";
+    public void fieldC1InMediumSudokuNumberFromSolvedSudoku(){
+        String str="C1";
         int col=letterToNumber(str.charAt(0));
         char rowChar=str.charAt(str.length() - 1);
         int row=Character.getNumericValue(rowChar)-1;
-        setUpInput("5\n");
-        assertEquals(expertSudokuWrapper.sudoku.add(col,row,5),parseAdd(expertSudokuWrapper,str));
+        setUpInput("7\n");
+        boolean indicator=mediumSudokuWrapper.sudoku.add(col,row,7);
+        assertEquals(indicator,parseAdd(mediumSudokuWrapper,str));
+        display=new SudokuDisplay(mediumSudokuWrapper.sudoku);
+        String sudokuBoardAsString=display.output();
+        assertTrue(testOut.toString().contains(sudokuBoardAsString));
+    }
+    @Test
+    public void fieldFromThirdBoxInExpert(){
+        String str="I2";
+        int col=letterToNumber(str.charAt(0));
+        char rowChar=str.charAt(str.length() - 1);
+        int row=Character.getNumericValue(rowChar)-1;
+        setUpInput("2\n");
+        assertEquals(expertSudokuWrapper.sudoku.add(col,row,2),parseAdd(expertSudokuWrapper,str));
+        display=new SudokuDisplay(expertSudokuWrapper.sudoku);
+        String sudokuBoardAsString=display.output();
+        assertTrue(testOut.toString().contains(sudokuBoardAsString));
     }
     @Test
     public void fieldFromNinthBoxInHard(){
@@ -102,6 +134,52 @@ public class UserTypeInFieldTest {
         int row=Character.getNumericValue(rowChar)-1;
         setUpInput("8\n");
         assertEquals(hardSudokuWrapper.sudoku.add(col,row,8),parseAdd(hardSudokuWrapper,str));
+        display=new SudokuDisplay(hardSudokuWrapper.sudoku);
+        String sudokuBoardAsString=display.output();
+        assertTrue(testOut.toString().contains(sudokuBoardAsString));
     }
-
+    @Test
+    public void invalidInputException(){
+        String str="G8";
+        setUpInput("a\n");
+        assertThrows(InputMismatchException.class, () -> {
+            parseAdd(hardSudokuWrapper,str);
+        });
+    }
+    @Test
+    public void invalidInputNumberBiggerThanExpected(){
+        String str="F4";
+        setUpInput("10\n");
+        assertFalse(parseAdd(hardSudokuWrapper,str));
+    }
+    @Test
+    public void invalidInputZero(){
+        String str="H1";
+        setUpInput("0\n");
+        assertFalse(parseAdd(expertSudokuWrapper,str));
+    }
+    @Test
+    public void invalidInputNegativeNumber(){
+        String str="D3";
+        setUpInput("-1\n");
+        assertFalse(parseAdd(easySudokuWrapper,str));
+    }
+    @Test
+    public void invalidFieldFirstChar(){
+        String str="P1";
+        setUpInput("1\n");
+        assertFalse(parseAdd(hardSudokuWrapper,str));
+    }
+    @Test
+    public void invalidFieldSecondChar(){
+        String str="B0";
+        setUpInput("2\n");
+        assertFalse(parseAdd(easySudokuWrapper,str));
+    }
+    @Test
+    public void invalidInputAlreadyTakenField(){
+        String str="A1";
+        setUpInput("8\n");
+        assertFalse(parseAdd(easySudokuWrapper,str));
+    }
 }
