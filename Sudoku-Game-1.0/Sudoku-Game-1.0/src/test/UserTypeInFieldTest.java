@@ -1,6 +1,7 @@
 package test;
 
 import com.company.Sudoku;
+import com.company.SudokuDisplay;
 import com.company.SudokuWrapper;
 import com.company.UserChoosingDifficulty;
 import org.junit.jupiter.api.AfterEach;
@@ -12,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
+import static com.company.UserTypeInField.parseAdd;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTypeInFieldTest {
@@ -28,6 +30,7 @@ public class UserTypeInFieldTest {
     private SudokuWrapper mediumSudokuWrapper;
     private SudokuWrapper hardSudokuWrapper;
     private SudokuWrapper expertSudokuWrapper;
+    private SudokuDisplay display;
 
     @BeforeEach
     public void setUp() {
@@ -48,13 +51,57 @@ public class UserTypeInFieldTest {
         testIn = new ByteArrayInputStream(input.getBytes());
         System.setIn(testIn);
     }
-    @Test
-    public void fieldFromFirstBox(){
-
+    public int letterToNumber(char c){
+        switch (c) {
+            case 'A':
+                return 0;
+            case 'B':
+                return 1;
+            case 'C':
+                return 2;
+            case 'D':
+                return 3;
+            case 'E':
+                return 4;
+            case 'F':
+                return 5;
+            case 'G':
+                return 6;
+            case 'H':
+                return 7;
+            case 'I':
+                return 8;
+        }
+        return -1;
     }
     @Test
-    public void fieldFromSecondBox(){
-
+    public void fieldFromFirstBoxInMediumSudoku(){
+        String str="C1";
+        int col=letterToNumber(str.charAt(0));
+        char rowChar=str.charAt(str.length() - 1);
+        int row=Character.getNumericValue(rowChar)-1;
+        setUpInput("1\n");
+        assertEquals(mediumSudokuWrapper.sudoku.add(col,row,1),parseAdd(mediumSudokuWrapper,str));
+    //    display=new SudokuDisplay(mediumSudokuWrapper.sudoku);
+    //    assertTrue(testOut.toString().contains(display.toString()));
+    }
+    @Test
+    public void fieldFromThirdBoxInExpert(){
+        String str="I3";
+        int col=letterToNumber(str.charAt(0));
+        char rowChar=str.charAt(str.length() - 1);
+        int row=Character.getNumericValue(rowChar)-1;
+        setUpInput("5\n");
+        assertEquals(expertSudokuWrapper.sudoku.add(col,row,5),parseAdd(expertSudokuWrapper,str));
+    }
+    @Test
+    public void fieldFromNinthBoxInHard(){
+        String str="G8";
+        int col=letterToNumber(str.charAt(0));
+        char rowChar=str.charAt(str.length() - 1);
+        int row=Character.getNumericValue(rowChar)-1;
+        setUpInput("8\n");
+        assertEquals(hardSudokuWrapper.sudoku.add(col,row,8),parseAdd(hardSudokuWrapper,str));
     }
 
 }

@@ -22,6 +22,8 @@ class UserChoosingDifficultyTest {
     private final PrintStream originalSystemOut = System.out;
     private ByteArrayInputStream testIn;
     private ByteArrayOutputStream testOut;
+    private SudokuWrapper usrSudokuWrapper;
+    private SudokuDisplay display;
 
 
     @BeforeEach
@@ -41,44 +43,44 @@ class UserChoosingDifficultyTest {
     @Test
     public void testDifficultyEasy() {
         setUpInput("1\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(easy);
-        SudokuDisplay displayEasy=new SudokuDisplay(easy);
+        usrSudokuWrapper = new SudokuWrapper(easy);
+        display=new SudokuDisplay(easy);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(1, result);
-        assertTrue(testOut.toString().contains(displayEasy.toString()));
+        assertTrue(testOut.toString().contains(display.toString()));
     }
     @Test
     public void testDifficultyMedium() {
         setUpInput("2\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(medium);
-        SudokuDisplay displayEasy=new SudokuDisplay(medium);
+        usrSudokuWrapper = new SudokuWrapper(medium);
+        display=new SudokuDisplay(medium);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(1, result);
-        assertTrue(testOut.toString().contains(displayEasy.toString()));
+        assertTrue(testOut.toString().contains(display.toString()));
     }
     @Test
     public void testDifficultyHard() {
         setUpInput("3\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(hard);
-        SudokuDisplay displayEasy=new SudokuDisplay(hard);
+        usrSudokuWrapper = new SudokuWrapper(hard);
+        display=new SudokuDisplay(hard);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(1, result);
-        assertTrue(testOut.toString().contains(displayEasy.toString()));
+        assertTrue(testOut.toString().contains(display.toString()));
     }
 
     @Test
     public void testDifficultyExpert() {
         setUpInput("4\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(expert);
-        SudokuDisplay displayEasy=new SudokuDisplay(expert);
+        usrSudokuWrapper = new SudokuWrapper(expert);
+        display=new SudokuDisplay(expert);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(1, result);
-        assertTrue(testOut.toString().contains(displayEasy.toString()));
+        assertTrue(testOut.toString().contains(display.toString()));
     }
     @Test
     public void inputForExit(){
         setUpInput("5\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(expert);
+        usrSudokuWrapper = new SudokuWrapper(expert);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(0, result);
     }
@@ -86,35 +88,35 @@ class UserChoosingDifficultyTest {
     @Test
     public void invalidInputNumberOnUpperBound(){
         setUpInput("6\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(expert);
+        usrSudokuWrapper = new SudokuWrapper(expert);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(-1, result);
     }
     @Test
     public void invalidInputNumberOnLowerBound(){
         setUpInput("0\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(expert);
+        usrSudokuWrapper = new SudokuWrapper(expert);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(-1, result);
     }
     @Test
     public void invalidInputNegativeNumber(){
         setUpInput("-1\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(expert);
+        usrSudokuWrapper = new SudokuWrapper(expert);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(-1, result);
     }
     @Test
     public void invalidInputBiggerNumber(){
         setUpInput("100\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(expert);
+        usrSudokuWrapper = new SudokuWrapper(expert);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(-1, result);
     }
     @Test
     public void invalidInputString(){
         setUpInput("a\n");
-        SudokuWrapper usrSudokuWrapper = new SudokuWrapper(expert);
+        usrSudokuWrapper = new SudokuWrapper(expert);
         int result = difficulty(usrSudokuWrapper);
         assertEquals(-1, result);
     }

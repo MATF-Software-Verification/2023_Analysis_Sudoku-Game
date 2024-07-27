@@ -27,10 +27,10 @@ public class Sudoku{
         return this.board;
     }
 
-    protected int[][] getBoard() {
+    public int[][] getBoard() {
         return this.board;
     }
-    protected int[][] getUsrBoard() {
+    public int[][] getUsrBoard() {
         return this.usrBoard;
     } //added because of refactoring --> SudokuDisplay
 
