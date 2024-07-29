@@ -27,6 +27,7 @@ public class UserTypeInFieldTest {
     private final PrintStream originalSystemOut = System.out;
     private ByteArrayInputStream testIn;
     private ByteArrayOutputStream testOut;
+
     private SudokuWrapper easySudokuWrapper;
     private SudokuWrapper mediumSudokuWrapper;
     private SudokuWrapper hardSudokuWrapper;

@@ -2,12 +2,13 @@ package com.company;
 public class SudokuDisplay { //class extracted from primary Sudoku class
     private int[][] board = new int[9][9];
     private int[][] usrBoard = new int[9][9];
+
     public SudokuDisplay(Sudoku sudoku){
         this.board= sudoku.getBoard();
         this.usrBoard=sudoku.getUsrBoard();
     }
     @Override
-    public String toString() {
+    public String toString() { //formats the board based on the board array directly, replacing zeros with dashes.
         StringBuilder result = new StringBuilder();
         result.append("    A B C   D E F   G H I\n");
         for (int i = 0; i < board.length; i++) {
@@ -33,7 +34,7 @@ public class SudokuDisplay { //class extracted from primary Sudoku class
         String finalResult = result.toString().replaceAll("0", "-");
         return finalResult;
     }
-    public String output() {
+    public String output() { //formats the board by checking both board and usrBoard, prioritizing values from board but falling back on usrBoard if board has a zero. It also replaces zeros with dashes.
         StringBuilder result = new StringBuilder();
         int blockValue;
         result.append("    A B C   D E F   G H I\n");
