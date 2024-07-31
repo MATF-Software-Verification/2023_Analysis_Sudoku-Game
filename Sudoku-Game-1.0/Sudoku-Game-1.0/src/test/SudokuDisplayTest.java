@@ -22,13 +22,6 @@ public class SudokuDisplayTest {
     private static Sudoku invalidSudoku=new Sudoku("111 111 200 080 020 900 000 000 057 030 000 021 290 540 000 000 000 104 001 000 000 407 086 010 900 000 083");
     //it's not important that sudoku is invalid, all methods from SudokuDisplay will work regularly
 
-    //invalid initialization - ovo cemo da testiramo u SudokuTest
-    // private static Sudoku missingFieldSudoku= new Sudoku("530 070 000 600 195 000 098 000 060 800 060 003 400 803 001 700 020 006 060 000 280 000 419 005 000 080 79");
-   // private static Sudoku addedExtraFieldSudoku= new Sudoku("100 489 200 080 020 900 000 000 057 030 000 021 290 540 000 0001 000 104 001 000 000 407 086 010 900 000 083");
-   // private static Sudoku missingRowSudoku=new Sudoku("407 002 050 930 006 004 810 405 002 576 239 400 200 601 075 301 507 849 690 000 527 050 028 103");
-   // private static Sudoku missingColSudoku=new Sudoku("90 24 00 60 03 20 00 00 90 00 00 06 00 00 00 70 62 83 40 06 00 30 08 42 12 00 00");
-   // private static Sudoku smallerInvalidsudoku=new Sudoku("109 200 400");
-
     private SudokuWrapper easySudokuWrapper;
     private SudokuWrapper mediumSudokuWrapper;
     private SudokuWrapper hardSudokuWrapper;
@@ -327,7 +320,4 @@ public class SudokuDisplayTest {
         display=new SudokuDisplay(invalidSudoku);
         assertEquals(display.getBoardAsString(),"111 111 200 080 020 900 000 000 057 030 000 021 290 540 000 000 000 104 001 000 000 407 086 010 900 000 083");
     }
-
-
-
 }
