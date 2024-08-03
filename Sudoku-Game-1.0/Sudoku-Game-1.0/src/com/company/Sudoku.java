@@ -448,6 +448,9 @@ public class Sudoku{
         if (counter != 81) {
             return false;
         }
+        //counter is 81
+
+        //1. rows
         for (int i = 0; i < 9; i++) {
             int[] array = new int[9];
             int value;
@@ -461,6 +464,7 @@ public class Sudoku{
                 }
             }
         }
+        //2.columns
         for (int i = 0; i < 9; i++) {
             int[] array = new int[9];
             int value;
@@ -474,6 +478,7 @@ public class Sudoku{
                 }
             }
         }
+        //3.boxes
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 int[] array = new int[9];
