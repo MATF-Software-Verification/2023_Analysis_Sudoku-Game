@@ -1,5 +1,6 @@
 package test;
 
+import com.company.Main;
 import com.company.Sudoku;
 import com.company.SudokuDisplay;
 import com.company.SudokuWrapper;
@@ -49,6 +50,15 @@ class MainTest {
     public void setUpInput(String input) {
         testIn = new ByteArrayInputStream(input.getBytes());
         System.setIn(testIn);
+    }
+    @Test
+    public void testPlay(){
+        setUpInput("1");
+        setUpInput("1\n");
+        setUpInput("A9\n");
+        setUpInput("7\n");
+        Main.main(null);
+        assertTrue(testOut.toString().contains("Successfully added 7 to A9"));
     }
 
 }

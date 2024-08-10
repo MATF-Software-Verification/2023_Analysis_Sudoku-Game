@@ -75,9 +75,6 @@ public class Sudoku{
         return false;
     }
 
-
-    //Solver for sudoku...
-    //------------------------------------------------------------------------------------------------------------------
     private void analyzeRow() {
         int value;
         for (int row = 0; row < 9; row++) {
