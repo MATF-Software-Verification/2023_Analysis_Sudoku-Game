@@ -7,8 +7,7 @@ public class UserChoosingDifficulty { //class extracted from primary Main class
     private static Sudoku hard = new Sudoku("600 500 073 500 002 004 001 003 580 903 080 705 850 037 020 076 050 000 087 300 250 010 470 006 360 821 000");
     private static Sudoku expert = new Sudoku("000 970 800 300 005 640 000 060 031 035 040 000 209 007 310 070 030 490 420 006 000 051 304 009 003 000 500");
 
-    public static int difficulty(SudokuWrapper usrSudokuWrapper) { //if-else is refactored because of the class SudokuDisplay (which is refactored/extracted from Sudoku class)
-        Scanner scanner = new Scanner(System.in);
+    public static int difficulty(SudokuWrapper usrSudokuWrapper,Scanner scanner) { //if-else is refactored because of the class SudokuDisplay (which is refactored/extracted from Sudoku class)
         int result = 1;
         System.out.println("\n1. Easy...\n2. Medium... \n3. Hard... \n4. Expert... \n5. Exit game...");
         String usrChoice = scanner.next().toLowerCase();
@@ -32,6 +31,7 @@ public class UserChoosingDifficulty { //class extracted from primary Main class
             System.out.println(display.toString());
             usrSudokuWrapper.sudoku = new Sudoku(display.getBoardAsString());
         }
+
         return result;
     }
 

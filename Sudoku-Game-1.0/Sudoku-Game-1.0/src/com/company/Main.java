@@ -22,7 +22,7 @@ public class Main {
         String location = "";
         boolean parseAddReturn;
         ArrayList<String> undoList = new ArrayList<String>();
-        while ((diffReturn = difficulty(usrSudokuWrapper)) != 0) {
+        while ((diffReturn = difficulty(usrSudokuWrapper,scanner)) != 0) {
             endGame = false;
             if (diffReturn == 1) {
                 while (!endGame) {
@@ -31,7 +31,7 @@ public class Main {
                     if (usrChoice.equals("1")) {
                         System.out.println("\nType in the location to fill in...");
                         location = scanner.next().toUpperCase();
-                        parseAddReturn = parseAdd(usrSudokuWrapper,location);
+                        parseAddReturn = parseAdd(usrSudokuWrapper,location,scanner);
                         boolean solvedStatus = usrSudokuWrapper.sudoku.isSolved();
                         if (solvedStatus) {
                             System.out.println("\nYou Won!");

@@ -1,13 +1,10 @@
 package com.company;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.Scanner;
 
 public class UserTypeInField { //class extracted from primary Main class
 
-    public static boolean parseAdd(SudokuWrapper usrSudokuWrapper,String str) {
-        Scanner scanner = new Scanner(System.in);
+    public static boolean parseAdd(SudokuWrapper usrSudokuWrapper,String str,Scanner scanner) {
         if (str.matches("[A-I][1-9]")) {
             int colASCII = (int)str.charAt(0);
             int rowASCII = (int)str.charAt(1);
