@@ -99,7 +99,7 @@ public class UserTypeInFieldTest {
         setUpInput("1\n");
         boolean indicator=mediumSudokuWrapper.sudoku.add(col,row,1);
         Scanner scanner = new Scanner(System.in);
-        assertEquals(indicator,parseAdd(easySudokuWrapper,str,scanner));
+        assertEquals(indicator,parseAdd(mediumSudokuWrapper,str,scanner));
         display=new SudokuDisplay(mediumSudokuWrapper.sudoku);
         String sudokuBoardAsString=display.output();
         assertTrue(testOut.toString().contains(sudokuBoardAsString));
@@ -113,7 +113,7 @@ public class UserTypeInFieldTest {
         setUpInput("7\n");
         boolean indicator=mediumSudokuWrapper.sudoku.add(col,row,7);
         Scanner scanner = new Scanner(System.in);
-        assertEquals(indicator,parseAdd(easySudokuWrapper,str,scanner));
+        assertEquals(indicator,parseAdd(mediumSudokuWrapper,str,scanner));
         display=new SudokuDisplay(mediumSudokuWrapper.sudoku);
         String sudokuBoardAsString=display.output();
         assertTrue(testOut.toString().contains(sudokuBoardAsString));
