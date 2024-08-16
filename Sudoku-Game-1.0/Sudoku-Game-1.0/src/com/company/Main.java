@@ -50,7 +50,7 @@ public class Main {
                         int index = undoList.size() - 1;
                         if (index >= 0) {
                             String obj = undoList.get(index);
-                            if (obj.matches("[A-I][1-9]")) {
+                            if (obj.matches("[A-I][1-9]")) { //this if is not needed. The locations in undoList are from parseAdd, which already has this if, and it's already tested
                                 usrSudokuWrapper.sudoku.remove((int)obj.charAt(0) - 65, (int)obj.charAt(1) - 49);
                                 SudokuDisplay display=new SudokuDisplay(usrSudokuWrapper.sudoku);
                                 System.out.println(display.output());

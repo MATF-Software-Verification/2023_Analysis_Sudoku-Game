@@ -128,4 +128,14 @@ class MainTest {
         Main.main(null);
         assertTrue(testOut.toString().contains("Can't undo"));
     }
+    @Test
+    public void testPlayEasySolvingSudoku(){
+        String simulatedInput="1\n1\nG1\n2\n1\nB2\n8\n1\nd2\n3\n1\ne2\n1\n1\ng2\n9\n1\nI2\n6\n1\nc3\n2\n1\nd3\n8\n1\nE3\n5\n1\nG3\n7\n1\nh3\n1\n1\nc4\n3\n1\nE4\n7\n1\ng4\n6\n1\nh4\n9\n1\nh5\n8\n1\ni5\n1\n1\nB6\n4\n1\nC6\n9\n1\ne6\n8\n1\ng6\n3\n1\ne7\n6\n1\nb7\n2\n1\nc8\n8\n1\nd8\n1\n1\ne8\n4\n1\nf8\n3\n1\na9\n7\n1\nc9\n4\n1\nd9\n9\n1\nh9\n6\n5\n";
+        setUpInput(simulatedInput);
+
+        Main.main(null);
+        assertTrue(testOut.toString().contains("\nYou Won!"));
+    }
+
+
 }
