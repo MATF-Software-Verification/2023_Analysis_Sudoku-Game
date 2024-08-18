@@ -16,6 +16,7 @@ import java.util.Scanner;
 import static com.company.UserChoosingDifficulty.difficulty;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.*;
 
 class UserChoosingDifficultyTest {
     private static Sudoku easy = new Sudoku("165 794 038 407 002 050 930 006 004 810 405 002 576 239 400 200 601 075 301 507 849 690 000 527 050 028 103");
@@ -46,96 +47,140 @@ class UserChoosingDifficultyTest {
     }
     @Test
     public void testDifficultyEasy() {
-        setUpInput("1\n");
-        usrSudokuWrapper = new SudokuWrapper(easy);
-        display=new SudokuDisplay(easy);
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("1");
 
-        Scanner scanner = new Scanner(System.in);
-        int result = difficulty(usrSudokuWrapper,scanner);
+        usrSudokuWrapper = new SudokuWrapper(easy);
+        display = new SudokuDisplay(easy);
+
+        int result = difficulty(usrSudokuWrapper, scanner);
 
         assertEquals(1, result);
         assertTrue(testOut.toString().contains(display.toString()));
+
+        verify(scanner).next();
     }
     @Test
     public void testDifficultyMedium() {
-        setUpInput("2\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("2");
+
         usrSudokuWrapper = new SudokuWrapper(medium);
-        display=new SudokuDisplay(medium);
-        Scanner scanner = new Scanner(System.in);
-        int result = difficulty(usrSudokuWrapper,scanner);
-        assertEquals(1, result);
-        assertTrue(testOut.toString().contains(display.toString()));
-    }
-    @Test
-    public void testDifficultyHard() {
-        setUpInput("3\n");
-        usrSudokuWrapper = new SudokuWrapper(hard);
-        display=new SudokuDisplay(hard);
-        Scanner scanner = new Scanner(System.in);
-        int result = difficulty(usrSudokuWrapper,scanner);
+        display = new SudokuDisplay(medium);
+
+        int result = difficulty(usrSudokuWrapper, scanner);
 
         assertEquals(1, result);
         assertTrue(testOut.toString().contains(display.toString()));
+
+        verify(scanner).next();
+    }
+    @Test
+    public void testDifficultyHard() {
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("3");
+
+        usrSudokuWrapper = new SudokuWrapper(hard);
+        display = new SudokuDisplay(hard);
+
+        int result = difficulty(usrSudokuWrapper, scanner);
+
+        assertEquals(1, result);
+        assertTrue(testOut.toString().contains(display.toString()));
+
+        verify(scanner).next();
     }
 
     @Test
     public void testDifficultyExpert() {
-        setUpInput("4\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("4");
+
         usrSudokuWrapper = new SudokuWrapper(expert);
-        display=new SudokuDisplay(expert);
-        Scanner scanner = new Scanner(System.in);
-        int result = difficulty(usrSudokuWrapper,scanner);
+        display = new SudokuDisplay(expert);
+
+        int result = difficulty(usrSudokuWrapper, scanner);
+
         assertEquals(1, result);
         assertTrue(testOut.toString().contains(display.toString()));
+
+        verify(scanner).next();
     }
     @Test
     public void inputForExit(){
-        setUpInput("5\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("5");
+
         usrSudokuWrapper = new SudokuWrapper(expert);
-        Scanner scanner = new Scanner(System.in);
+
         int result = difficulty(usrSudokuWrapper,scanner);
+
         assertEquals(0, result);
+
+        verify(scanner).next();
     }
     //for invalid inputs, type of sudoku doesn't matter
     @Test
     public void invalidInputNumberOnUpperBound(){
-        setUpInput("6\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("6");
+
         usrSudokuWrapper = new SudokuWrapper(expert);
-        Scanner scanner = new Scanner(System.in);
+
         int result = difficulty(usrSudokuWrapper,scanner);
+
         assertEquals(-1, result);
+        verify(scanner).next();
     }
     @Test
     public void invalidInputNumberOnLowerBound(){
-        setUpInput("0\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("0");
+
         usrSudokuWrapper = new SudokuWrapper(expert);
-        Scanner scanner = new Scanner(System.in);
+
         int result = difficulty(usrSudokuWrapper,scanner);
         assertEquals(-1, result);
+
+        verify(scanner).next();
+
     }
     @Test
     public void invalidInputNegativeNumber(){
-        setUpInput("-1\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("-1");
+
         usrSudokuWrapper = new SudokuWrapper(expert);
-        Scanner scanner = new Scanner(System.in);
+
         int result = difficulty(usrSudokuWrapper,scanner);
         assertEquals(-1, result);
+
+        verify(scanner).next();
     }
     @Test
     public void invalidInputBiggerNumber(){
-        setUpInput("100\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("100");
+
         usrSudokuWrapper = new SudokuWrapper(expert);
-        Scanner scanner = new Scanner(System.in);
+
         int result = difficulty(usrSudokuWrapper,scanner);
         assertEquals(-1, result);
+
+        verify(scanner).next();
     }
     @Test
     public void invalidInputString(){
-        setUpInput("a\n");
+        Scanner scanner = mock(Scanner.class);
+        when(scanner.next()).thenReturn("a");
+
         usrSudokuWrapper = new SudokuWrapper(expert);
-        Scanner scanner = new Scanner(System.in);
+
         int result = difficulty(usrSudokuWrapper,scanner);
         assertEquals(-1, result);
+
+        verify(scanner).next();
     }
+
 
 }
