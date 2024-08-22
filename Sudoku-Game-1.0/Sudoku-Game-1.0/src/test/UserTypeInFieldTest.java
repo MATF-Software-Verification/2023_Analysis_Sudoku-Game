@@ -11,6 +11,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -53,7 +54,7 @@ public class UserTypeInFieldTest {
         testIn = new ByteArrayInputStream(input.getBytes());
         System.setIn(testIn);
     }
-    public int letterToNumber(char c){
+    private int letterToNumber(char c){
         switch (c) {
             case 'A':
                 return 0;
@@ -76,13 +77,22 @@ public class UserTypeInFieldTest {
         }
         return -1;
     }
+    private ArrayList<Integer> getRowAndColumnFromField(String field){
+        int col=letterToNumber(field.charAt(0));
+        char rowChar=field.charAt(field.length() - 1);
+        int row=Character.getNumericValue(rowChar)-1;
+        ArrayList<Integer> list=new ArrayList<>();
+        list.add(row);
+        list.add(col);
+        return list;
+    }
     @Test
     public void fieldFromFifthBoxInEasySudoku(){
         String str="E6";
-        int col=letterToNumber(str.charAt(0));
-        char rowChar=str.charAt(str.length() - 1);
-        int row=Character.getNumericValue(rowChar)-1;
         setUpInput("8\n");
+        ArrayList<Integer> list=getRowAndColumnFromField(str);
+        int row=list.getFirst();
+        int col=list.getLast();
         boolean indicator=easySudokuWrapper.sudoku.add(col,row,8);
         Scanner scanner = new Scanner(System.in);
         assertEquals(indicator,parseAdd(easySudokuWrapper,str,scanner));
@@ -93,9 +103,9 @@ public class UserTypeInFieldTest {
     @Test
     public void fieldC1InMediumSudokuNumberNotFromSolvedSudoku(){
         String str="C1";
-        int col=letterToNumber(str.charAt(0));
-        char rowChar=str.charAt(str.length() - 1);
-        int row=Character.getNumericValue(rowChar)-1;
+        ArrayList<Integer> list=getRowAndColumnFromField(str);
+        int row=list.getFirst();
+        int col=list.getLast();
         setUpInput("1\n");
         boolean indicator=mediumSudokuWrapper.sudoku.add(col,row,1);
         Scanner scanner = new Scanner(System.in);
@@ -107,9 +117,9 @@ public class UserTypeInFieldTest {
     @Test
     public void fieldC1InMediumSudokuNumberFromSolvedSudoku(){
         String str="C1";
-        int col=letterToNumber(str.charAt(0));
-        char rowChar=str.charAt(str.length() - 1);
-        int row=Character.getNumericValue(rowChar)-1;
+        ArrayList<Integer> list=getRowAndColumnFromField(str);
+        int row=list.getFirst();
+        int col=list.getLast();
         setUpInput("7\n");
         boolean indicator=mediumSudokuWrapper.sudoku.add(col,row,7);
         Scanner scanner = new Scanner(System.in);
@@ -121,10 +131,10 @@ public class UserTypeInFieldTest {
     @Test
     public void fieldFromThirdBoxInExpert(){
         String str="I2";
-        int col=letterToNumber(str.charAt(0));
-        char rowChar=str.charAt(str.length() - 1);
-        int row=Character.getNumericValue(rowChar)-1;
         setUpInput("2\n");
+        ArrayList<Integer> list=getRowAndColumnFromField(str);
+        int row=list.getFirst();
+        int col=list.getLast();
         Scanner scanner = new Scanner(System.in);
         assertEquals(expertSudokuWrapper.sudoku.add(col,row,2),parseAdd(expertSudokuWrapper,str,scanner));
         display=new SudokuDisplay(expertSudokuWrapper.sudoku);
@@ -134,10 +144,11 @@ public class UserTypeInFieldTest {
     @Test
     public void fieldFromNinthBoxInHard(){
         String str="G8";
-        int col=letterToNumber(str.charAt(0));
-        char rowChar=str.charAt(str.length() - 1);
-        int row=Character.getNumericValue(rowChar)-1;
         setUpInput("8\n");
+        ArrayList<Integer> list=getRowAndColumnFromField(str);
+        int row=list.getFirst();
+        int col=list.getLast();
+
         Scanner scanner = new Scanner(System.in);
         assertEquals(hardSudokuWrapper.sudoku.add(col,row,8),parseAdd(hardSudokuWrapper,str,scanner));
         display=new SudokuDisplay(hardSudokuWrapper.sudoku);

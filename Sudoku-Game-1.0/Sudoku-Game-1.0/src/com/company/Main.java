@@ -7,7 +7,6 @@ import static com.company.UserChoosingDifficulty.difficulty;
 import static com.company.UserTypeInField.parseAdd;
 public class Main {
     public static void main(String[] args) {
-
         play();
     }
 

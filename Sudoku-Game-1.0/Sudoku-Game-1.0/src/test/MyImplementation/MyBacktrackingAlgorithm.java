@@ -1,18 +1,6 @@
 package test.MyImplementation;
 
 public class MyBacktrackingAlgorithm {
-    // it goes element by element (passing through columns first, then rows) and put value (from 1 to 9).
-    // With method isValid() it's checking if that value fits in that row, column and box.
-    // If the value can be in that field, then we go into
-    // recursion with the board that has filled field with value.
-    // If the value can't be in that field, then we look if the next value can.
-    // We do that until trying every value from 1 to 9 and not one works. That means
-    // that some previous step (or steps) before this current was bad (for example in
-    // some field we can put 2 or 6 and we put 2. It shows that we can't fill the next
-    //empty field in that row because of the bad choice - we should have chosen 6).
-    // When this happens, we take a step back (return to the previous field in row)
-    // by returning false and then look for different value in that field. If we can't
-    //find that value again, then we return to previous field again...
     public static boolean solveBacktracking(int[][] board) {
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {

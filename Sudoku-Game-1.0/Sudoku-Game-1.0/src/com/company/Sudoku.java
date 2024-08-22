@@ -447,6 +447,8 @@ public class Sudoku{
         }
         //counter is 81
 
+        // cheking if rows, col and boxes are valid. Maybe we could have used aready written
+        // functions like presentCol/Row
         //1. rows
         for (int i = 0; i < 9; i++) {
             int[] array = new int[9];
