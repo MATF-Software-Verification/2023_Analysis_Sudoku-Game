@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fcf8700e-0182-46c1-b022-e007cbbef443" name="Default Changelist" comment="Refactoring of the code">
+      <change beforePath="$PROJECT_DIR$/.css/coverage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyleidea-libs/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mockito_core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.img/arrowDown.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.img/arrowUp.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recording.jfr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/com/company/Sudoku.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/com/company/SudokuDisplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/com/company/SudokuWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/com/company/UserChoosingDifficulty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/com/company/UserTypeInField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/test/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/test/MyImplementation/MyBacktrackingAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/test/MyImplementation/MyMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/test/SudokuDisplayTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/test/SudokuTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/test/UserChoosingDifficultyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku-Game-1.0/src/test/UserTypeInFieldTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/com/company/Sudoku.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/com/company/SudokuDisplay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/com/company/SudokuWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/com/company/UserChoosingDifficulty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/com/company/UserTypeInField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/test/MainTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/test/MyImplementation/MyBacktrackingAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/test/MyImplementation/MyMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/test/SudokuDisplayTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/test/SudokuTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/test/UserChoosingDifficultyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudoku-Game-1.0/test/UserTypeInFieldTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/.classes/MainTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/.classes/UserChoosingDifficultyTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Marija\Documents\GitHub\2023_Analysis_Sudoku-Game\Sudoku-Game-1.0" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarijaBB&quot;
+  }
+}</component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MATF-Software-Verification/2023_Analysis_Sudoku-Game.git&quot;,
+    &quot;accountId&quot;: &quot;da092c69-94af-4c44-b4f3-b6832f9264b2&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2jbcDs2JLOrRSKXX8hLdSL35uWQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Profiler#2",
+    "Application.MyMain.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.InputHandlerTest.testProcessInput (1).executor": "Run",
+    "JUnit.InputHandlerTest.testProcessInput.executor": "Run",
+    "JUnit.MTest.testProcessInput.executor": "Run",
+    "JUnit.MainTest.executor": "Run",
+    "JUnit.MainTest.testPlay.executor": "Run",
+    "JUnit.MainTest.testPlayEasySolvingSudoku.executor": "Profiler#2",
+    "JUnit.MainTest.testPlayMediumInvalidUndoing.executor": "Run",
+    "JUnit.SudokuTest.executor": "Run",
+    "JUnit.SudokuTest.testIsSolvedEasyTrue.executor": "Run",
+    "JUnit.SudokuTest.testIsSolvedExpertWithBadSecondRow.executor": "Run",
+    "JUnit.SudokuTest.testIsSolvedMediumWithoutEnteringValues.executor": "Run",
+    "JUnit.UserChoosingDifficultyTest.executor": "Run",
+    "JUnit.UserChoosingDifficultyTest.testDifficultyEasy.executor": "Run",
+    "JUnit.UserTypeInFieldTest.executor": "Run",
+    "JUnit.UserTypeInFieldTest.fieldFromFifthBoxInEasySudoku.executor": "Run",
+    "JUnit.UserTypeInFieldTest.invalidInputException.executor": "Profiler#2",
+    "JUnit.test in Sudoku-Game-1.0.executor": "Coverage",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Marija/Documents/GitHub/2023_Analysis_Sudoku-Game/Sudoku-Game-1.0",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marija\Downloads\Sudoku-Game-1.0\Sudoku-Game-1.0\src\com\company" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.company" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.company" />
+      <recent name="test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserTypeInFieldTest.invalidInputException">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Sudoku-Game-1.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testPlayEasySolvingSudoku" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sudoku-Game-1.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.MainTest" />
+      <option name="METHOD_NAME" value="testPlayEasySolvingSudoku" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuTest.testIsSolvedExpertWithBadSecondRow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sudoku-Game-1.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SudokuTest" />
+      <option name="METHOD_NAME" value="testIsSolvedExpertWithBadSecondRow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTypeInFieldTest.invalidInputException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sudoku-Game-1.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.UserTypeInFieldTest" />
+      <option name="METHOD_NAME" value="invalidInputException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test in Sudoku-Game-1.0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sudoku-Game-1.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MainTest.testPlayEasySolvingSudoku" />
+      <item itemvalue="JUnit.UserTypeInFieldTest.invalidInputException" />
+      <item itemvalue="JUnit.test in Sudoku-Game-1.0" />
+      <item itemvalue="JUnit.SudokuTest.testIsSolvedExpertWithBadSecondRow" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTypeInFieldTest.invalidInputException" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MainTest.testPlayEasySolvingSudoku" />
+        <item itemvalue="JUnit.test in Sudoku-Game-1.0" />
+        <item itemvalue="JUnit.SudokuTest.testIsSolvedExpertWithBadSecondRow" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcf8700e-0182-46c1-b022-e007cbbef443" name="Default Changelist" comment="" />
+      <created>1721659100821</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721659100821</updated>
+      <workItem from="1723382581503" duration="1608000" />
+      <workItem from="1723482788093" duration="5625000" />
+      <workItem from="1723829415034" duration="3168000" />
+      <workItem from="1723832628264" duration="1452000" />
+      <workItem from="1723915451236" duration="1341000" />
+      <workItem from="1723964551785" duration="12464000" />
+      <workItem from="1724315314095" duration="13424000" />
+      <workItem from="1724430349416" duration="4348000" />
+    </task>
+    <task id="LOCAL-00001" summary="Refactoring of the code">
+      <created>1721738845155</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721738845155</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactoring of the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring of the code" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="easy.board[8]" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$MainTest_testPlay.ic" NAME="MainTest.testPlay Coverage Results" MODIFIED="1723307343385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$SudokuTest_solveExpertSudoku.ic" NAME="SudokuTest.solveExpertSudoku Coverage Results" MODIFIED="1723294387348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$SudokuTest_testIsSolvedSomeSudokuWithBadBoxButGoodRowsAndCols.ic" NAME="SudokuTest.testIsSolvedSomeSudokuWithBadBoxButGoodRowsAndCols Coverage Results" MODIFIED="1722706798463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$test_in_Sudoku_Game_1_0.ic" NAME="test in Sudoku-Game-1.0 Coverage Results" MODIFIED="1724442072518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.company.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$SudokuTest.ic" NAME="SudokuTest Coverage Results" MODIFIED="1723305722490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$SudokuDisplayTest_expertSudokuOutputChangedFieldA1.ic" NAME="SudokuDisplayTest.expertSudokuOutputChangedFieldA1 Coverage Results" MODIFIED="1722267228961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1723663038403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$SudokuTest_testGetBoard.ic" NAME="SudokuTest.testGetBoard Coverage Results" MODIFIED="1722699590200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$Main.ic" NAME="Main Coverage Results" MODIFIED="1722267755603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$SudokuTest_solveMediumSudokuAddedValueInE3AttemptWithNumber6.ic" NAME="SudokuTest.solveMediumSudokuAddedValueInE3AttemptWithNumber6 Coverage Results" MODIFIED="1723144551440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$SudokuTest_testIsSolvedMediumWithoutEnteringValues.ic" NAME="SudokuTest.testIsSolvedMediumWithoutEnteringValues Coverage Results" MODIFIED="1722704513616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sudoku_Game_1_0$MainTest_testPlayEasySolvingSudoku.ic" NAME="MainTest.testPlayEasySolvingSudoku Coverage Results" MODIFIED="1723787090124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+  </component>
+</project>

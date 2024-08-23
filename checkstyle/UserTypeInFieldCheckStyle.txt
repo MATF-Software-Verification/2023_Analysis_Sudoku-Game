@@ -1,0 +1,34 @@
+Checkstyle found 1,427 item(s) in 13 file(s)
+Main.java : 33 item(s)
+MainTest.java : 70 item(s)
+MyBacktrackingAlgorithm.java : 49 item(s)
+MyMain.java : 40 item(s)
+Sudoku.java : 184 item(s)
+SudokuDisplay.java : 43 item(s)
+SudokuDisplayTest.java : 370 item(s)
+SudokuTest.java : 348 item(s)
+SudokuWrapper.java : 6 item(s)
+UserChoosingDifficulty.java : 29 item(s)
+UserChoosingDifficultyTest.java : 29 item(s)
+UserTypeInField.java : 20 item(s)
+Utility classes should not have a public or default constructor. (5:1) [HideUtilityClassConstructor]
+Line is longer than 80 characters (found 95). (7:0) [LineLength]
+Missing a Javadoc comment. (7:5) [MissingJavadocMethod]
+Parameter usrSudokuWrapper should be final. (7:36) [FinalParameters]
+',' is not followed by whitespace. (7:66) [WhitespaceAfter]
+Parameter str should be final. (7:67) [FinalParameters]
+',' is not followed by whitespace. (7:77) [WhitespaceAfter]
+Parameter scanner should be final. (7:78) [FinalParameters]
+'typecast' is not followed by whitespace. (9:32) [WhitespaceAfter]
+'typecast' is not followed by whitespace. (10:32) [WhitespaceAfter]
+'9' is a magic number. (13:29) [MagicNumber]
+Line is longer than 80 characters (found 90). (14:0) [LineLength]
+'65' is a magic number. (14:60) [MagicNumber]
+'49' is a magic number. (14:75) [MagicNumber]
+Line is longer than 80 characters (found 95). (15:0) [LineLength]
+Line is longer than 80 characters (found 85). (16:0) [LineLength]
+'=' is not followed by whitespace. (16:42) [WhitespaceAround]
+'=' is not preceded with whitespace. (16:42) [WhitespaceAround]
+'}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). (21:9) [RightCurly]
+Line is longer than 80 characters (found 82). (22:0) [LineLength]
+UserTypeInFieldTest.java : 206 item(s)

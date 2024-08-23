@@ -1,0 +1,43 @@
+Checkstyle found 1,427 item(s) in 13 file(s)
+Main.java : 33 item(s)
+MainTest.java : 70 item(s)
+MyBacktrackingAlgorithm.java : 49 item(s)
+MyMain.java : 40 item(s)
+Sudoku.java : 184 item(s)
+SudokuDisplay.java : 43 item(s)
+SudokuDisplayTest.java : 370 item(s)
+SudokuTest.java : 348 item(s)
+SudokuWrapper.java : 6 item(s)
+UserChoosingDifficulty.java : 29 item(s)
+Missing package-info.java file. (1:0) [JavadocPackage]
+Utility classes should not have a public or default constructor. (4:1) [HideUtilityClassConstructor]
+Line is longer than 80 characters (found 155). (5:0) [LineLength]
+Missing a Javadoc comment. (5:5) [JavadocVariable]
+Line is longer than 80 characters (found 157). (6:0) [LineLength]
+Missing a Javadoc comment. (6:5) [JavadocVariable]
+Line is longer than 80 characters (found 155). (7:0) [LineLength]
+Missing a Javadoc comment. (7:5) [JavadocVariable]
+Line is longer than 80 characters (found 157). (8:0) [LineLength]
+Missing a Javadoc comment. (8:5) [JavadocVariable]
+Line is longer than 80 characters (found 191). (10:0) [LineLength]
+Missing a Javadoc comment. (10:5) [MissingJavadocMethod]
+Parameter usrSudokuWrapper should be final. (10:34) [FinalParameters]
+',' is not followed by whitespace. (10:64) [WhitespaceAfter]
+Parameter scanner should be final. (10:65) [FinalParameters]
+Line is longer than 80 characters (found 103). (12:0) [LineLength]
+'=' is not followed by whitespace. (14:30) [WhitespaceAround]
+'=' is not preceded with whitespace. (14:30) [WhitespaceAround]
+'=' is not followed by whitespace. (16:20) [WhitespaceAround]
+'=' is not preceded with whitespace. (16:20) [WhitespaceAround]
+'=' is not followed by whitespace. (18:20) [WhitespaceAround]
+'=' is not preceded with whitespace. (18:20) [WhitespaceAround]
+'=' is not followed by whitespace. (20:20) [WhitespaceAround]
+'=' is not preceded with whitespace. (20:20) [WhitespaceAround]
+'=' is not followed by whitespace. (22:20) [WhitespaceAround]
+'=' is not preceded with whitespace. (22:20) [WhitespaceAround]
+'==' is not followed by whitespace. (30:19) [WhitespaceAround]
+'==' is not preceded with whitespace. (30:19) [WhitespaceAround]
+'{' is not preceded with whitespace. (30:23) [WhitespaceAround]
+UserChoosingDifficultyTest.java : 29 item(s)
+UserTypeInField.java : 20 item(s)
+UserTypeInFieldTest.java : 206 item(s)
