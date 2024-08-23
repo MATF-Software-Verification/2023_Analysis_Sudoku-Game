@@ -1,0 +1,3 @@
+[submodule "Sudoku-Game"]
+	path = Sudoku-Game
+	url = https://github.com/xx005fs/Sudoku-Game
